@@ -57,4 +57,4 @@ This project is bootstrapped with [`create-react-app`](https://github.com/facebo
 - [prettier](https://prettier.io/): An opinionated code formatter
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/alivenotions/pidpod/blob/master/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/alivenotions/quiz-master/blob/master/LICENSE) file for details
