@@ -6,7 +6,7 @@ import Login from './authentication/Login'
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route path="/login" component={Login} />
         </Switch>
