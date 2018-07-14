@@ -5,7 +5,7 @@ import './LoginForm.css'
 class LoginForm extends React.Component {
   render() {
     return (
-      <form className="login-form">
+      <form className="login-form" onSubmit={this.props.submitForm}>
         <div className="flex-row">
           <label className="lf--label" htmlFor="username">
             <svg x="0px" y="0px" width="12px" height="13px">
@@ -20,6 +20,7 @@ class LoginForm extends React.Component {
             className="lf--input"
             placeholder="Username"
             type="text"
+            required
           />
         </div>
         <div className="flex-row">
@@ -38,6 +39,7 @@ class LoginForm extends React.Component {
             className="lf--input"
             placeholder="Password"
             type="password"
+            required
           />
         </div>
         <input className="lf--submit" type="submit" value="LOGIN" />
