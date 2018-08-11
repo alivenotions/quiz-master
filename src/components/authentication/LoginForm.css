@@ -1,95 +1,70 @@
-.login-form {
-  width: 100%;
-  padding: 2em;
-  position: relative;
-  background: rgba(0, 0, 0, 0.15);
-}
-.login-form:before {
-  content: '';
+.login-card {
   position: absolute;
-  top: -2px;
-  left: 0;
-  height: 2px;
-  width: 100%;
-  background: linear-gradient(to right, #c3358d, #d60059);
-}
-@media screen and (min-width: 600px) {
-  .login-form {
-    width: 50vw;
-    max-width: 15em;
-  }
-}
-
-.flex-row {
-  display: flex;
-  margin-bottom: 1em;
-}
-
-.lf--label {
-  width: 2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f5f6f8;
-  cursor: pointer;
-}
-
-.lf--input {
-  flex: 1;
-  padding: 1em;
-  border: 0;
-  color: #8f8f8f;
-  font-size: 1rem;
-}
-.lf--input:focus {
-  outline: none;
-  transition: -webkit-transform 0.15s ease;
-  transition: transform 0.15s ease;
-  transition: transform 0.15s ease, -webkit-transform 0.15s ease;
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.lf--submit {
-  display: block;
-  padding: 1em;
-  width: 100%;
-  background: linear-gradient(to right, #c33559, #d60047);
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-  font-size: 0.75em;
-  font-weight: 600;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
-}
-.lf--submit:focus {
-  outline: none;
-  transition: -webkit-transform 0.15s ease;
-  transition: transform 0.15s ease;
-  transition: transform 0.15s ease, -webkit-transform 0.15s ease;
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.lf--forgot {
-  margin-top: 1em;
-  color: #d6006b;
-  font-size: 0.65em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 450px;
   text-align: center;
+  display: flex;
+  color: white;
+  box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, 0.5);
 }
 
-::-webkit-input-placeholder {
-  color: #8f8f8f;
+.info {
+  width: 45%;
+  background: rgba(20, 20, 20, 0.8);
+  padding: 30px 0;
+  border-right: 5px solid rgba(30, 30, 30, 0.8);
+}
+.info h2 {
+  padding-top: 30px;
+  font-weight: 300;
+}
+.info p {
+  font-size: 18px;
 }
 
-:-ms-input-placeholder {
-  color: #8f8f8f;
+.login-form {
+  width: 70%;
+  padding: 30px 0;
+  background: rgba(20, 40, 40, 0.8);
+  transition: 0.2s;
+}
+.login-form h2 {
+  font-weight: 300;
 }
 
-::-ms-input-placeholder {
-  color: #8f8f8f;
+.inputFields {
+  margin: 15px 0;
+  font-size: 16px;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #0ab4b4;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: rgba(20, 20, 20, 0.2);
+  color: white;
+  outline: none;
 }
 
-::placeholder {
-  color: #8f8f8f;
+.noBullet {
+  list-style-type: none;
+  padding: 0;
+}
+
+#login-btn {
+  border: 1px solid #0ab4b4;
+  background: rgba(20, 20, 20, 0.6);
+  font-size: 18px;
+  color: white;
+  margin-top: 20px;
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+#login-btn:hover {
+  background: rgba(20, 20, 20, 0.8);
+  padding: 10px 80px;
 }

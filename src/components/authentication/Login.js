@@ -2,7 +2,6 @@ import React from 'react'
 import { Redirect } from 'react-router-dom'
 
 import LoginForm from './LoginForm'
-import './Login.css'
 
 class Login extends React.Component {
   state = {
@@ -20,9 +19,7 @@ class Login extends React.Component {
     return !!redirectToQuizManager ? (
       <Redirect to={'/QuizManager'} />
     ) : (
-      <div className="login">
-        <LoginForm submitForm={this.submitForm} />
-      </div>
+      <LoginForm submitForm={this.submitForm} />
     )
   }
 }
