@@ -50,11 +50,6 @@
   outline: none;
 }
 
-.noBullet {
-  list-style-type: none;
-  padding: 0;
-}
-
 #login-btn {
   border: 1px solid #0ab4b4;
   background: rgba(20, 20, 20, 0.6);
@@ -65,7 +60,11 @@
   cursor: pointer;
   transition: 0.4s;
 }
-#login-btn:hover {
+#login-btn:hover:enabled {
   background: rgba(20, 20, 20, 0.8);
   padding: 10px 80px;
+}
+#login-btn:disabled {
+  color: #ccc;
+  border: 1px solid #ccc;
 }
