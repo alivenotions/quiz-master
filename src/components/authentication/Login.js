@@ -1,7 +1,7 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
 
-import LoginForm from './LoginForm'
+import LoginCard from './LoginCard'
 
 class Login extends React.Component {
   state = {
@@ -19,7 +19,7 @@ class Login extends React.Component {
     return !!redirectToQuizManager ? (
       <Redirect to={'/QuizManager'} />
     ) : (
-      <LoginForm submitForm={this.submitForm} />
+      <LoginCard submitForm={this.submitForm} />
     )
   }
 }

@@ -1,20 +1,9 @@
 import React from 'react'
 
+import FormErrors from '../forms/FormErrors'
+import Input from '../forms/formAtoms/Input'
+import Button from '../forms/formAtoms/Button'
 import './LoginForm.css'
-
-const FormErrors = ({ formErrors }) => (
-  <div className="form-errors">
-    {Object.keys(formErrors).map((fieldName, index) => {
-      return !!formErrors[fieldName].length > 0 ? (
-        <p style={{ color: '#FF3333' }} key={index}>
-          {fieldName} {formErrors[fieldName]}
-        </p>
-      ) : (
-        ''
-      )
-    })}
-  </div>
-)
 
 class LoginForm extends React.Component {
   state = {
@@ -67,42 +56,29 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div className="login-card">
-        <div className="info">
-          <h2>Quiz Master</h2>
-          <p>four legs good, two legs better</p>
-        </div>
-        <form className="login-form" onSubmit={this.props.submitForm}>
-          <h2>Login</h2>
-          <label htmlFor="username" />
-          <input
-            type="text"
-            className="inputFields"
-            name="username"
-            placeholder="Username"
-            value={this.state.username}
-            onChange={this.handleInputChange}
-          />
-          <label htmlFor="password" />
-          <input
-            type="password"
-            className="inputFields"
-            name="password"
-            placeholder="Password"
-            value={this.state.password}
-            onChange={this.handleInputChange}
-          />
-          <input
-            type="submit"
-            id="login-btn"
-            name="login"
-            alt="Login"
-            value="Login"
-            disabled={!this.state.formValid}
-          />
-          <FormErrors formErrors={this.state.formErrors} />
-        </form>
-      </div>
+      <form className="login-form" onSubmit={this.props.submitForm}>
+        <h2>Login</h2>
+        <Input
+          type="text"
+          name="username"
+          value={this.state.username}
+          onChange={this.handleInputChange}
+        />
+        <Input
+          type="password"
+          name="password"
+          value={this.state.password}
+          onChange={this.handleInputChange}
+        />
+        <Button
+          type="submit"
+          id="login-btn"
+          name="login"
+          disabled={!this.state.formValid}
+          value="Submit"
+        />
+        <FormErrors formErrors={this.state.formErrors} />
+      </form>
     )
   }
 }
