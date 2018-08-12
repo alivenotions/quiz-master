@@ -11,7 +11,7 @@ class Login extends React.Component {
   submitForm = event => {
     event.preventDefault()
     const [username] = event.target
-    sessionStorage.setItem('username', username)
+    sessionStorage.setItem('username', username.value)
     this.setState({ redirectToQuizManager: true })
   }
   render() {
