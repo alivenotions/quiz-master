@@ -1,10 +1,25 @@
 import React from 'react'
+import styled from 'styled-components'
 
-import './Input.css'
+const StyledInput = styled.input`
+  display: block;
+  margin: 15px auto;
+  font-size: 16px;
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #0ab4b4;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: rgba(20, 20, 20, 0.2);
+  color: white;
+  outline: none;
+`
+
 const Input = props => (
   <React.Fragment>
     <label htmlFor={props.name} />
-    <input
+    <StyledInput
       type={props.type}
       className="inputFields"
       name={props.name}

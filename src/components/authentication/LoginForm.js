@@ -1,9 +1,19 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import FormErrors from '../forms/FormErrors'
 import Input from '../forms/formAtoms/Input'
 import Button from '../forms/formAtoms/Button'
-import './LoginForm.css'
+
+const StyledForm = styled.form`
+  width: 70%;
+  padding: 30px 0;
+  background: rgba(20, 40, 40, 0.8);
+  transition: 0.2s;
+`
+const Heading = styled.h2`
+  font-weight: 300;
+`
 
 class LoginForm extends React.Component {
   state = {
@@ -56,8 +66,8 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <form className="login-form" onSubmit={this.props.submitForm}>
-        <h2>Login</h2>
+      <StyledForm onSubmit={this.props.submitForm}>
+        <Heading>Login</Heading>
         <Input
           type="text"
           name="username"
@@ -78,7 +88,7 @@ class LoginForm extends React.Component {
           value="Submit"
         />
         <FormErrors formErrors={this.state.formErrors} />
-      </form>
+      </StyledForm>
     )
   }
 }
