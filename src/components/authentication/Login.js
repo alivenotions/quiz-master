@@ -1,8 +1,7 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
 
-import LoginForm from './LoginForm'
-import './Login.css'
+import LoginCard from './LoginCard'
 
 class Login extends React.Component {
   state = {
@@ -12,7 +11,7 @@ class Login extends React.Component {
   submitForm = event => {
     event.preventDefault()
     const [username] = event.target
-    sessionStorage.setItem('username', username)
+    sessionStorage.setItem('username', username.value)
     this.setState({ redirectToQuizManager: true })
   }
   render() {
@@ -20,9 +19,7 @@ class Login extends React.Component {
     return !!redirectToQuizManager ? (
       <Redirect to={'/QuizManager'} />
     ) : (
-      <div className="login">
-        <LoginForm submitForm={this.submitForm} />
-      </div>
+      <LoginCard submitForm={this.submitForm} />
     )
   }
 }

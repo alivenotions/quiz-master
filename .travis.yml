@@ -14,3 +14,9 @@ deploy:
   local_dir: build
   on:
     branch: master
+notifications:
+  email:
+    recipients:
+      - dhanjalbhavdeep@gmail.com
+    on_success: never
+    on_failure: always
