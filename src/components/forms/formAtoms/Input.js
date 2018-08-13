@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const StyledInput = styled.input`
   display: block;
@@ -29,5 +30,12 @@ const Input = props => (
     />
   </React.Fragment>
 )
+
+Input.propTypes = {
+  name: PropTypes.string,
+  type: PropTypes.string.isRequired,
+  value: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+}
 
 export default Input

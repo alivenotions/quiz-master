@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 import LoginForm from './LoginForm'
 
@@ -42,6 +43,10 @@ class LoginCard extends React.Component {
       </StyledLoginCard>
     )
   }
+}
+
+LoginCard.propTypes = {
+  submitForm: PropTypes.func.isRequired,
 }
 
 export default LoginCard

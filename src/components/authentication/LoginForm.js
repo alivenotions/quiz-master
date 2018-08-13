@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 import FormErrors from '../forms/FormErrors'
 import Input from '../forms/formAtoms/Input'
@@ -91,6 +92,10 @@ class LoginForm extends React.Component {
       </StyledForm>
     )
   }
+}
+
+LoginForm.propTypes = {
+  submitForm: PropTypes.func.isRequired,
 }
 
 export default LoginForm
