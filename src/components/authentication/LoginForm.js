@@ -83,7 +83,6 @@ class LoginForm extends React.Component {
         />
         <Button
           type="submit"
-          id="login-btn"
           name="login"
           disabled={!this.state.formValid}
           value="Submit"
