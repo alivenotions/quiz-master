@@ -1,32 +1,17 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 
-import '../../tests/setup'
-
 import LoginForm from './LoginForm'
 
 describe('LoginForm', () => {
   let props
-  let mountedLoginForm
   let mockFn
-  const loginForm = () => {
-    if (!mountedLoginForm) {
-      mountedLoginForm = mount(<LoginForm {...props} />)
-      return mountedLoginForm
-    }
-  }
 
   beforeEach(() => {
     mockFn = jest.fn()
     props = {
       submitForm: mockFn,
     }
-    mountedLoginForm = undefined
-  })
-
-  it('always renders a form', () => {
-    const forms = loginForm().find('form')
-    expect(forms.length).toBeGreaterThan(0)
   })
 
   it('should have an onSubmit attribute', () => {
