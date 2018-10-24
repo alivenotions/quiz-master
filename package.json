@@ -4,11 +4,11 @@
   "private": true,
   "homepage": "https://alivenotions.github.io/quiz-master/",
   "dependencies": {
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4",
-    "styled-components": "^3.4.2"
+    "react-scripts": "2.0.5",
+    "styled-components": "^4.0.2"
   },
   "scripts": {
     "precommit": "lint-staged",
@@ -25,12 +25,18 @@
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
-    "enzyme": "^3.4.1",
+    "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.2.0",
     "husky": "^0.14.3",
     "jest-styled-components": "^6.0.1",
     "lint-staged": "^7.2.0",
-    "prettier": "^1.13.7",
+    "prettier": "^1.14.3",
     "sinon": "^6.1.5"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
