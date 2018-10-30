@@ -13,6 +13,7 @@
     "babel-plugin-named-asset-import": "^0.2.2",
     "babel-preset-react-app": "^5.0.4",
     "bfj": "6.1.1",
+    "bs-css": "^7.3.0",
     "bs-loader": "^2.0.7",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
     "chalk": "2.4.1",
