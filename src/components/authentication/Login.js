@@ -17,7 +17,7 @@ class Login extends React.Component {
   render() {
     const { redirectToQuizManager } = this.state
     return !!redirectToQuizManager ? (
-      <Redirect to={'/quiz-master'} />
+      <Redirect to={'/instructions'} />
     ) : (
       <LoginCard submitForm={this.submitForm} />
     )

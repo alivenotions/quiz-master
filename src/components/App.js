@@ -3,7 +3,7 @@ import { Switch, Route, BrowserRouter } from 'react-router-dom'
 
 import Login from './authentication/Login'
 import '../theme/globalStyle'
-import QuizMaster from './quiz-master/QuizMaster'
+import Instructions from './instructions/Instructions'
 
 class App extends Component {
   render() {
@@ -12,7 +12,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Login} />
           <Route path="/login" component={Login} />
-          <Route path="/quiz-master" component={QuizMaster} />
+          <Route path="/instructions" component={Instructions} />
         </Switch>
       </BrowserRouter>
     )
