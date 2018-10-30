@@ -6,7 +6,7 @@ export default class QuizMaster extends Component {
   render() {
     return (
       <Fragment>
-        <Header heading="Quiz Master" />
+        <Header heading="QUIZ MASTER" />
       </Fragment>
     )
   }
