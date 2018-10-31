@@ -15,7 +15,12 @@ module Styles = {
     marginBottom(px(0)),
     marginRight(`percent(25.0)),
     marginLeft(`percent(25.0)),
-    fontSize(em(1.2)),
+    fontSize(em(1.5)),
+  ])
+
+  let proceedForm = style([
+    textAlign(`center),
+    marginTop(px(20))
   ])
 }
 
@@ -36,6 +41,9 @@ let make = (~instructions) => {
           |> ReasonReact.array
         )
       </ul>
+      <div className=Styles.proceedForm>
+        <Button type_="submit" name="proceed" disabled=false value="Proceed" />
+      </div>
     </div>
   )
 }
